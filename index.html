@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefólio Rebeca Santos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="/imagens/RS logo elegante minimalista preto branco e verde musgo.png" alt="Logo do Portfólio"
+            class="logo">
+        <!-- Menu hamburguer -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Repositórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Início -->
+        <section id="inicio" class="secao1 animate__animated animate__slideInLeft">
+            <img src="./imagens/foto-de-perfil-portf.png" alt="Profile Picture" class="profile-pic floating-image">
+            <h2>Olá, sou Rebeca Santos :D</h2>
+            <p id="typing-text"><span id="cursor"></span></p>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre-mim" class="secao2">
+            <div class="sobre-mim-content">
+                <div class="sobre-mim-text">
+                    <h2 id="sobre-mim-title"><span class="cursor"></span></h2>
+                    <h3>MIM...</h3>
+                    <p>Graduanda em Análise e Desenvolvimento de Sistemas, possuo conhecimentos em HTML5, CSS3,
+                        JavaScript e React, além de experiência em projetos gerenciados por Metodologias Ágeis.
+                        Atualmente em busca de oportunidades para crescimento e desenvolvimento profissional, meu
+                        objetivo
+                        é aplicar conhecimentos e habilidades em desenvolvimento, especialmente em frameworks, mas
+                        aberta e disponível para novas aventuras na área.</p>
+                </div>
+                <div class="sobre-mim-image">
+                    <img src="./imagens/icone-sobre-mim.png" alt="Design Skills Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="secao3">
+            <h2 id="habilidades-title"><span class="cursor"></span></h2>
+            <h3> *deslize o cursor ou clique para ver as descrições</h3>
+            <div class="skill">
+                <div class="skill-item">
+                    <img src="/imagens/icons8-html(1).svg" alt="HTML5" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">HTML5 é a linguagem de marcação padrão para a criação de
+                        páginas web.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="/imagens/icons8-css.svg" alt="CSS3" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">CSS3 é utilizado para estilizar páginas web, controlando
+                        layout, cores e fontes.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="/imagens/icons8-javascript(1).svg" alt="JS" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">JavaScript é uma linguagem de programação que permite criar
+                        conteúdo interativo na web.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="/imagens/icons8-nativo-de-reagir.svg" alt="REACT" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">React é uma biblioteca JavaScript para criar interfaces de
+                        usuário.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="/imagens/icons8-figma(3).svg" alt="FIGMA" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Figma é uma ferramenta de design colaborativa para criar
+                        interfaces de usuário.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="secao4">
+            <h2 id="projetos-title"><span class="cursor"></span></h2>
+            <div class="projetos-cards">
+                <div class="projeto-card">
+                    <video controls>
+                        <source src="/videos/hunter-hunterwebsite.mp4" type="video/mp4">
+                    </video>
+                    <a href="https://github.com/L3BECA/hunter-hunter-website" target="_blank"
+                        class="btn-github">Repositório</a>
+                </div>
+                <div class="projeto-card">
+                    <video controls>
+                        <source src="/videos/doaong-website.mp4" type="video/mp4">
+                    </video>
+                    <a href="https://github.com/L3BECA/doa-ong-website" target="_blank"
+                        class="btn-github">Repositório</a>
+                </div>
+                <div class="projeto-card">
+                    <video controls>
+                        <source src="/videos/telacadstro-website.mp4" type="video/mp4">
+                    </video>
+                    <a href="https://github.com/L3BECA/TelaCadastro" target="_blank" class="btn-github">Repositório</a>
+                </div>
+                <div class="projeto-card">
+                    <video controls>
+                        <source src="/videos/biolife-figma.mp4" type="video/mp4">
+                    </video>
+                    <a href="https://www.figma.com/design/xAMiR7kfd2AO03oluVJiKj/Bio-Life-APP?node-id=0-1&t=OOk4zhXT8zwLvImh-1"
+                        target="_blank" class="btn-github">Figma</a>
+                </div>
+            </div>
+        </section>
+        <!-- Contato -->
+        <section id="contato" class="secao5">
+            <div class="buttons">
+                <a href="./CV_Rebeca_Santos.pdf" download="CV_Rebeca_Santos" class="btn">Download CV</a>
+                <a href="mailto:rebecaslv350@gmail.com" class="btn">Entre em Contato</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
