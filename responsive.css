@@ -81,19 +81,27 @@
     }
 
     .profile-pic {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: auto;
         margin-bottom: -10px;
     }
 
     #inicio h2 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+    }
+
+    #typing-text {
+        font-size: 0.8rem;
+    }
+
+    #additional-text {
+        font-size: 0.7rem;
     }
 
     .sobre-mim-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
-        padding: 40px 20px;
+        padding: 20px;
     }
 
     #sobre-mim {
@@ -101,16 +109,17 @@
     }
 
     #sobre-mim h2 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     #sobre-mim h3 {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
     }
 
     #sobre-mim p {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        text-align: justify;
     }
 
     .sobre-mim-image {
@@ -119,12 +128,12 @@
     }
 
     .sobre-mim-image img {
-        width: 250px;
+        width: 150px;
         height: auto;
     }
 
     .secao3 {
-        padding: 100px 0;
+        padding: 60px 0;
     }
 
     .secao3 h3 {
@@ -132,37 +141,53 @@
         margin-bottom: 20px;
     }
 
-    .secao5 {
-        padding-top: 2px;
-    }
-
     .buttons {
         position: relative;
-        top: -10px;
-        flex-direction: column;
+        top: -40px;
+        flex-direction: row;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 
     .btn {
         width: 100%;
-        max-width: 200px;
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        max-width: 125px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        text-align: center;
     }
 
-    #habilidades {
-        padding: 60px 0;
+    #habilidades h2,
+    #projetos h2,
+    #repositorios h2 {
+        font-size: 1.4rem;
     }
 
     .skill {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .skill-item {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+    }
+
+    .skill-item[data-skill="coreldraw"] img,
+    .skill-item[data-skill="figma"] img {
+        margin-bottom:-80px;
     }
 
     .skill img {
         width: 80px;
-        height: 80px;
+        height: auto;
+    }
+
+    .skill .skill-description {
+        font-size: 0.6rem;
+        text-align: center;
     }
 
     #projetos {
@@ -172,15 +197,15 @@
     .projetos-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         justify-content: center;
-        margin-top: 90px;
+        margin-top: 50px;
     }
 
     .projeto-card {
-        width: calc(50% - 20px);
-        max-width: 300px;
-        margin-bottom: 20px;
+        width: calc(50% - 10px);
+        max-width: 250px;
+        margin-bottom: 10px;
     }
 
     .projeto-card video {

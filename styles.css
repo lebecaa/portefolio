@@ -213,7 +213,7 @@ p {
 
 .secao3 h2 {
     color: #ffffff;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .secao3 h3 {
@@ -228,28 +228,30 @@ p {
 }
 
 .skill {
-    display: flex;
+    display:inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 30px; 
 }
 
-.skill img {
-    width: 100px;
-    height: 100px;
-}
-
-.skill-item {
-    position: relative;
-    display: inline-block;
+.skill .skill-item {
+    position: relative; 
+    margin: 10px; 
     text-align: center;
 }
 
-.skill-description {
-    position: absolute;
-    bottom: -50px;
+.skill .skill-item img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.skill .skill-description {
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 10px;
@@ -258,17 +260,14 @@ p {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 2; 
 }
 
-.skill-item:hover .skill-description {
+.skill .skill-item:hover .skill-description {
     opacity: 1;
     visibility: visible;
 }
 
-.skill-description.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
 
 .buttons {
     margin-top: 80px;
@@ -283,13 +282,12 @@ p {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;
-    border: 2px solid #000000;
     font-size: 1rem;
+    text-align: center;
 }
 
 .btn:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #f582ae;
 }
 
 .projetos-cards {
@@ -313,6 +311,20 @@ p {
     display: block;
 }
 
+.projeto-card1 {
+    width: 600px; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-card1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 .btn-github {
     display: block;
     background-color: #000000;
@@ -320,30 +332,25 @@ p {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;
-    border: 2px solid #000000;
     font-size: 1rem;
     text-align: center;
     margin-top: 5px;
 }
 
 .btn-github:hover {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #f582ae;
 }
 
-/* Adicionando efeitos de transição suave */
 .skill img {
     width: 100px;
     height: 100px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efeito de escala nos ícones ao passar o mouse */
 .skill img:hover {
     transform: scale(1.2);
 }
 
-/* Fade-in nos cards de projeto */
 .projeto-card {
     width: 300px;
     border-radius: 10px;
