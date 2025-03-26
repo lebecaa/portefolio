@@ -109,11 +109,11 @@
     }
 
     #sobre-mim h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     #sobre-mim h3 {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     #sobre-mim p {
@@ -128,8 +128,7 @@
     }
 
     .sobre-mim-image img {
-        width: 150px;
-        height: auto;
+        display: none;
     }
 
     .secao3 {
@@ -150,10 +149,10 @@
     }
 
     .btn {
-        width: 100%;
-        max-width: 125px;
+        width: 120px;
+        max-width: 130px;
         padding: 8px 12px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         text-align: center;
     }
 
