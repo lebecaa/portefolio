@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefólio Rebeca Santos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="./imagens/logors.png" alt="Logo do Portfólio"
+            class="logo">
+        <!-- Menu hamburguer -->
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <!-- Menu de navegação -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Repositórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Início -->
+        <section id="inicio" class="secao1 animate__animated animate__slideInLeft">
+            <img src="./imagens/foto-de-perfil-portf.png" alt="Profile Picture" class="profile-pic floating-image">
+            <h2>Olá, sou Rebeca Santos 👩🏻‍💻</h2>
+            <p id="typing-text"><span id="cursor"></span></p>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre-mim" class="secao2">
+            <div class="sobre-mim-content">
+                <div class="sobre-mim-text">
+                    <h2 id="sobre-mim-title"><span class="cursor"></span></h2>
+                    <h3>MIM...</h3>
+                    <p> Desenvolvedora Front-end & UI/UX Designer, atualmente graduanda em Análise e Desenvolvimento
+                        de Sistemas. Possuo certa experiência acadêmica em HTML5, CSS3, JavaScript e React, além de atuar em projetos gerenciados por Metodologias Ágeis. Busco oportunidades para crescer profissionalmente, aplicando meu conhecimento em desenvolvimento, especialmente em frameworks modernos, e estou sempre aberta a novos desafios na área.
+                        Além do desenvolvimento front-end, tenho experiência como designer gráfico, o que complementa minha atuação na área. Meu objetivo é unir criatividade e tecnologia para construir experiências digitais envolventes e funcionais.</p>
+                        <div class="buttons">
+                            <a href="./curriculo-rebeca-santos.pdf" download="CV_Rebeca_Santos" class="btn">Download CV</a>
+                            <a href="mailto:rebecasantosdev@gmail.com" class="btn">Entre em Contato</a>
+                        </div>
+                </div>
+                
+                <div class="sobre-mim-image">
+                    <img src="./imagens/icone-sobre-mim.png" alt="Design Skills Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="secao3">
+            <h2 id="habilidades-title"><span class="cursor"></span></h2>
+            <h3> *deslize o cursor ou clique para ver as descrições</h3>
+            <div class="skill">
+                <div class="skill-item">
+                    <img src="./imagens/iconhtml.svg" alt="HTML5" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Linguagem de marcação padrão para a criação de
+                        páginas web.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="./imagens/iconcss.svg" alt="CSS3" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Utilizado para estilizar páginas web, controlando
+                        layout, cores e fontes.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="./imagens/iconjs.svg" alt="JS" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Linguagem de programação que permite criar
+                        conteúdo interativo na web.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="./imagens/iconreact.svg" alt="REACT" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Biblioteca JavaScript para criar interfaces de
+                        usuário.</div>
+                </div>
+                <div class="skill-item">
+                    <img src="./imagens/capcutlogoo.png" alt="FIGMA" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Ferramenta de edição de vídeo que permite criar vídeos com diversos efeitos e recursos avançados.</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-item">
+                        <img src="./imagens/iconcoreldraw.svg" alt="HTML5" onclick="toggleDescription(this)">
+                        <div class="skill-description hidden">Software usado para criar ilustrações vetoriais e layouts de página com precisão e versatilidade.</div>
+                    </div>
+                <div class="skill-item">
+                    <img src="./imagens/iconfigma.svg" alt="FIGMA" onclick="toggleDescription(this)">
+                    <div class="skill-description hidden">Ferramenta de design colaborativa para criar
+                        interfaces de usuário.</div>
+                </div>
+
+            </div>
+        </section>
+
+ <!-- Projetos -->
+ <section id="projetos" class="secao4">
+    <h2 id="projetos-title"><span class="cursor"></span></h2>
+    <div class="projetos-cards">
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto Hunter Hunter Website">
+                <source src="./videos/hunter-hunterwebsite.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/lebecaa/hunter-hunter-characters" target="_blank"
+                class="btn-github">Repositório</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto Doa ONG Website">
+                <source src="./videos/doaong-website.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/L3BECA/doa-ong-website" target="_blank"
+                class="btn-github">Repositório</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto Tela Cadastro Website">
+                <source src="./videos/telacadstro-website.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/L3BECA/TelaCadastro" target="_blank" class="btn-github">Repositório</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do website de distribuidora">
+                <source src="./videos/rcdistribuidora.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/lebecaa/projeto-distribuidora" target="_blank"
+                class="btn-github">Repositório</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do website de maquiagem">
+                <source src="./videos/rccosmeticos.mp4" type="video/mp4">
+            </video>
+            <a href="https://github.com/lebecaa/rc-makeup" target="_blank"
+                class="btn-github">Repositório</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto Bio Life Figma">
+                <source src="./videos/biolife-figma.mp4" type="video/mp4">
+            </video>
+            <a href="https://www.figma.com/design/xAMiR7kfd2AO03oluVJiKj/Bio-Life-APP?m=auto&t=KqanG0jfGibrlaOS-1"
+                target="_blank" class="btn-github">Figma</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto ReS barbearia Figma">
+                <source src="./videos/WebSiteBarbearia.mp4" type="video/mp4">
+            </video>
+            <a href="https://www.figma.com/design/71CbROMtDQt9nMYKNvBkno/WebSite-Barbearia?t=KqanG0jfGibrlaOS-1"
+                target="_blank" class="btn-github">Figma</a>
+        </div>
+        <div class="projeto-card">
+            <video autoplay muted loop title="Vídeo do projeto Jogo da Memória">
+                <source src="./videos/JogodaMemóriaColorida.mp4" type="video/mp4">
+            </video>
+            <a href="https://www.figma.com/design/FBXphS7VtGCGmXCkZRDPSS/Jogo-da-Mem%C3%B3ria-Colorida?node-id=306-199&t=KqanG0jfGibrlaOS-1"
+                target="_blank" class="btn-github">Figma</a>
+        </div>
+       
+        <div class="projeto-card1">
+            <img src="./imagens/logotechimpact.png" alt="Logo para um projeto de faculdade"
+                title="Logo para um projeto de faculdade">
+        </div>
+        <div class="projeto-card1">
+            <img src="./imagens/logoterap.png" alt="Logo para uma farmácia" title="Logo para uma farmácia">
+        </div>
+        <div class="projeto-card1">
+            <img src="./imagens/arteparastory.png" alt="Arte para story" title="Arte para story">
+        </div>
+        <div class="projeto-card1">
+            <img src="./imagens/cartaofidelidade.png" alt="Cartão fidelidade" title="Cartão fidelidade">
+        </div>
+        <div class="projeto-card1">
+            <img src="./imagens/arteparacamisa.png" alt="Arte para camisa" title="Arte para camisa">
+        </div>
+        <div class="projeto-card1">
+            <img src="./imagens/arteparaestudio.png" alt="Arte de divulgação" title="Arte de divulgação">
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
