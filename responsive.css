@@ -123,8 +123,7 @@
     }
 
     .sobre-mim-image {
-        margin-top: 20px;
-        text-align: center;
+        display: none;
     }
 
     .sobre-mim-image img {
