@@ -1,34 +1,36 @@
-window.addEventListener('scroll', function () {
-    const elementosParaAnimar = document.querySelectorAll('.secao2, .secao3, .secao4');
-    elementosParaAnimar.forEach(elemento => {
-        if (elemento.getBoundingClientRect().top < window.innerHeight * 0.75) {
-            elemento.classList.remove('animate__animated', 'animate__zoomIn', 'animate__fadeInUp', 'animate__fadeInLeft', 'animate__fadeInRight', 'animate__bounceInDown', 'animate__fadeInDown', 'animate__rotateIn', 'animate__rotateInDownLeft', 'animate__jackInTheBox', 'animate__slideInRight', 'animate__flipInX', 'animate__slideInUp', 'animate__lightSpeedInRight', 'animate__fadeInDown');
-            elemento.classList.add('animate__animated', 'animate__slideInLeft');
-        } else {
-            elemento.classList.remove('animate__animated', 'animate__slideInLeft');
-        }
-    });
-});
-
 document.addEventListener('DOMContentLoaded', function () {
-    const textToType = "Uma dev júnior dedicada, impulsionada pela evolução da tecnologia e suas possibilidades ilimitadas.";
+    const text1 = "Uma dev júnior/designer dedicada, impulsionada";
+    const text2 = "pela evolução da tecnologia e suas possibilidades ilimitadas.";
+
     const typingTextElement = document.getElementById('typing-text');
     const cursor = document.getElementById('cursor');
-    let index = 0;
 
-    function type(element, text, cursor) {
+    function type(element, text, cursor, callback) {
         let i = 0;
         function typing() {
-            if (i < text.length) {
-                element.insertBefore(document.createTextNode(text.charAt(i)), cursor);
+            if (i <= text.length) {
+                element.innerHTML = text.substr(0, i);
                 i++;
-                setTimeout(typing, 100);
+                setTimeout(typing, 100); 
+            } else {
+                if (callback) {
+                    callback();
+                }
             }
         }
         typing();
     }
 
-    type(typingTextElement, textToType, cursor);
+    function startTypingLoop() {
+        type(typingTextElement, text1, cursor, () => {
+            setTimeout(() => {
+                type(typingTextElement, text2, cursor, () => {
+                    setTimeout(startTypingLoop, 1000); 
+                });
+            }, 1000); 
+        });
+    }
+    startTypingLoop();
 
     const sectionTitles = [
         { element: document.getElementById('sobre-mim-title'), text: 'SOBRE' },
@@ -64,4 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     setupMobileIconClick();
+
+    function toggleDescription(icon) {
+        var description = icon.nextElementSibling; 
+        description.style.opacity = (description.style.opacity === "1") ? "0" : "1"; 
+        description.style.visibility = (description.style.visibility === "visible") ? "hidden" : "visible"; 
+    }
+    
 });
